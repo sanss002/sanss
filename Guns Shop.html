@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <title>Guns Shop</title>
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="cssme.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Burned&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-decoration: none;
+      }
+      body,
+      button {
+        font-family: "Playfair Display", serif;
+        background-color: var(--bg);
+        color: #fff;
+      }
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        background-image: url("bacground.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .content {
+        padding: 1.4rem 7%;
+        max-width: 60rem;
+      }
+
+      .hero h1 {
+        font-size: 5em;
+        color: #fff;
+        text-shadow: 1px 1px 3px rgb(1, 1, 3, 0.5);
+        line-height: 1.2;
+      }
+
+      .hero h1 span {
+        color: var(--primary);
+      }
+
+      .hero p,
+      .misal {
+        font-family: "Poppins", sans-serif;
+        font-size: 1.6rem;
+        margin-top: 1rem;
+        line-height: 1.4;
+        font-weight: 100;
+        text-shadow: 1px 1px 3px rgb(1, 1, 3, 0.5);
+      }
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+        max-width: auto;
+        color: #fff;
+        padding: 5rem 7% 1.4rem;
+        text-align: center;
+        margin: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+      h2 span {
+        color: var(--primary);
+      }
+      /* MENU */
+      .menu h2 {
+        margin-bottom: 1rem;
+      }
+      .menu p {
+        font-family: "Poppins", sans-serif;
+        max-width: 30rem;
+        margin: auto;
+        font-weight: 100;
+        line-height: 1.6;
+        text-align: center;
+      }
+      .menu .row {
+       
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 5rem;
+        justify-content: center;
+      }
+      .menu .row img {
+        width: 95%;
+      }
+      
+      .menu .menu-card-title {
+        text-align: center;
+      }
+      .menu .menu-card-price {
+        text-align: center;
+      }
+
+
+      /* KONTAK */
+      .kontak p {
+        text-align: center;
+      }
+      .kontak .row {
+        display: flex;
+        margin-top: 2rem;
+        background-color: #222;
+      
+      }
+      .kontak .row .map {
+        flex: 1 1 45rem;
+        width: 100;
+        object-fit: cover;
+      }
+      .kontak .row form {
+        flex: 1 1 45rem;
+        padding: 5rem 2rem;
+        text-align: center;
+      }
+      .kontak .row form .input-group {
+        display: flex;
+        align-items: center;
+        margin-top: 2rem;
+        background-color: var(--bg);
+        border: 1px solid #eee;
+        padding-left: 2rem;
+      }
+      .kontak .row form .input-group input {
+        width: 100%;
+        padding: 2rem;
+        font-size: 1.7rem;
+        background: none;
+        color: #fff;
+      }
+      .kontak .row form .w3-btn {
+        margin-top: 3rem;
+        display: inline-block;
+        padding: 1rem 3rem;
+        font-size: 1.7rem;
+        color: #fff;
+        background-color: var(--primary);
+        cursor: pointer;
+      }
+      footer {
+        background-color: var(--primary);
+        text-align: center;
+        padding: 1rem 0;
+        margin-top: 3rem;
+
+      }
+      footer .socials {
+        padding: 1rem 0;
+
+
+      }
+
+      footer .socials a {
+        color: #fff;
+        margin: 1rem;
+      }
+      footer .socials a:hover {
+        color: var(--bg);
+      }
+      footer .credit {
+        font-size: 0.8rem;
+      }
+      footer .credit a {
+        color: var(--bg);
+        font-weight: 700;
+      }
+    </style>
+    <!-- My Style -->
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <button class="navbar-logo">Guns<span>$hop!!!</span></button>
+
+      <div class="navbar-nav">
+        <button class="w3-button" onclick="navbar('home')">Home</button>
+        <button class="w3-button" onclick="navbar('about')">
+          Tentang kami
+        </button>
+        <button class="w3-button" onclick="navbar('menu')">Katalog</button>
+        <button class="w3-button" onclick="navbar('kontak')">Kontak</button>
+      </div>
+
+      <div class="navbar-extra">
+        <button class="navbar-logo">Guns<span>$hop!!!</span></button>
+      </div>
+    </nav>
+
+    <!-- Navbar End -->
+
+    <!-- Hero Section start -->
+    <div id="home" class="w3-container kota">
+      <div class="hero">
+        <main class="content">
+          <h1>Senjata Api Legal<span>Termurah</span></h1>
+          <p>
+            Anda membutuhkan senjata untuk melindungi diri? Disini kami
+            menyediakan berbagai senjata legal untuk perlindungan anda dan
+            keluarga.
+          </p>
+        </main>
+      </div>
+    </div>
+
+    <!-- Hero Section end -->
+
+    <!-- ABOUT -->
+    <div id="about" class="w3-container kota" style="display: none">
+      <center>
+        <table>
+          <div class="w3-panel w3-border-w3-large about">
+            <h2><span>Tentang</span> Pemilik</h2>
+            <img src="pp.png" style="width: 20%; height: 25%" />
+            <div class="w3-left-align misal">
+              <p>Nama : Muhammad Ihsan Muslim</p>
+              <p>NIM : 10123456 Kelas</p>
+              <p>Kelas : IF-11</p>
+            </div>
+          </div>
+        </table>
+      </center> 
+    </div>
+
+    <!-- MENU/KATALOG -->
+
+    <div id="menu" class="w3-container kota menu" style="display: none">
+      <h2><span>Katalog</span> Kami</h2>
+      <p>
+        Berikut Adalah Senjata Yang Bisa Anda Bawa Pulang. Buruan Beli Sekarang Juga! Karna Stok Kami Terbatas.
+      </p>
+      <div class="row">
+        <div class="menu-card">
+          <a href="">
+            <img src="1.png" alt="M4" class="menu-card-img" />
+          </a>
+          <h3 class="menu-card-title">- M4 -</h3>
+          <p class="menu-card-price">$345000</p>
+        </div>
+        <div class="menu-card">
+          <a href="">
+            <img src="ak-47.jpg" alt="ak-47" class="menu-card-img" />
+          </a>
+          <h3 class="menu-card-title">- AK-47 -</h3>
+          <p class="menu-card-price">$654832</p>
+        </div>
+        <div class="menu-card">
+          <a href="">
+            <img src="awm.jpg" alt="AWM" class="menu-card-img" />
+          </a>
+          <h3 class="menu-card-title">- AWM -</h3>
+          <p class="menu-card-price">$987460</p>
+        </div>
+        <div class="menu-card">
+          <a href="">
+            <img src="fn scar.jpg" alt="FN SCAR" class="menu-card-img" />
+          </a>
+          <h3 class="menu-card-title">- FN SCAR -</h3>
+          <p class="menu-card-price">$567490</p>
+        </div>
+        <div class="menu-card">
+          <a href="">
+            <img src="g36.jpg" alt="G36" class="menu-card-img" />
+          </a>
+          <h3 class="menu-card-title">- G36 -</h3>
+          <p class="menu-card-price">$675839</p>
+        </div>
+        <div class="menu-card">
+          <a href="">
+            <img src="glock.jpg" alt="GLOCK" class="menu-card-img" />
+          </a>
+          <h3 class="menu-card-title">- GLOCK -</h3>
+          <p class="menu-card-price">$243567</p>
+        </div>
+        <div class="menu-card">
+          <a href="">
+            <img src="m-16.jpg" alt="M-16" class="menu-card-img" />
+          </a>
+          <h3 class="menu-card-title">- M-16 -</h3>
+          <p class="menu-card-price">$635647</p>
+        </div>
+        <div class="menu-card">
+          <a href="">
+            <img src="magnum revolver.jpg" alt="MAGNUM REVOLVER" class="menu-card-img" />
+          </a>
+          <h3 class="menu-card-title">- MAGNUM REVOLVER -</h3>
+          <p class="menu-card-price">$345627</p>
+        </div>
+        <div class="menu-card">
+          <a href="">
+            <img src="sks.jpeg" alt="SKS" class="menu-card-img" />
+          </a>
+          <h3 class="menu-card-title">- SKS -</h3>
+          <p class="menu-card-price">$542635</p>
+        </div>
+        <div class="menu-card">
+          <a href="">
+            <img src="SS-2 Pindad.jpg" alt="SS-2 Pindad" class="menu-card-img" />
+          </a>
+          <h3 class="menu-card-title">- SS-2 Pindad -</h3>
+          <p class="menu-card-price">$654256</p>
+        </div>
+        <div class="menu-card">
+          <a href="">
+            <img src="steyr aug.jpg" alt="STEYR AUG" class="menu-card-img" />
+          </a>
+          <h3 class="menu-card-title">- STEYR AUG -</h3>
+          <p class="menu-card-price">$879657</p>
+        </div>
+        <div class="menu-card">
+          <a href="">
+            <img src="uzi.jpg" alt="UZI" class="menu-card-img" />
+          </a>
+          <h3 class="menu-card-title">- UZI -</h3>
+          <p class="menu-card-price">$456278</p>
+        </div>
+        <div class="menu-card">
+          <a href="">
+            <img src="wilson combat.jpg" alt="WILSON COMBAT" class="menu-card-img" />
+          </a>
+          <h3 class="menu-card-title">- WILSON COMBAT -</h3>
+          <p class="menu-card-price">$345267</p>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+    
+    
+    <!-- KONTAK -->
+
+    <div id="kontak" class="w3-container kota kontak" style="display: none">
+      <h2><span>Kontak</span> Kami</h2>
+      <p>
+        Jika Masih Bingung Anda Bisa Menghubungi Kami Dengan Cara Mengisi Form Dibawah.
+      </p>
+
+      <div class="row">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.0014147625343!2d107.59672627375066!3d-6.890432517424119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e65e36229b09%3A0x428585eaedd8b09b!2sPs.%20Sederhana%2C%20Jl.%20Jurang%2C%20Pasteur%2C%20Kec.%20Sukajadi%2C%20Kota%20Bandung%2C%20Jawa%20Barat%2040161!5e0!3m2!1sid!2sid!4v1706682118125!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+
+        <form action="form">
+          <div class="input-group">
+            <i data-feather="user"></i>
+            <input type="text" placeholder="nama">
+          </div>
+          <div class="input-group">
+            <i data-feather="mail"></i>
+            <input type="text" placeholder="email">
+          </div>
+          <div class="input-group">
+            <i data-feather="phone"></i>
+            <input type="text" placeholder="no hp.">
+          </div>
+          <P>
+              <input type="submit" class="w3-btn" value="Kirim Pesan" onclick="proses()">
+          </P>
+        </form>
+        
+       </div>
+
+       <footer>
+        <div class="socials">
+          <a href="#"><i data-feather="instagram"></i></a>
+          <a href="#"><i data-feather="facebook"></i></a>
+          <a href="#"><i data-feather="twitter"></i></a>
+        </div>
+        <div class="credit">
+          <p>Created by <a href="">M Ihsan Muslim</a>  | &copy; 2024</p>
+        </div>
+     </footer>
+
+    <script>
+      feather.replace();
+    </script>
+    
+
+    <script>
+      function navbar(namakota) {
+        var i;
+        var x = document.getElementsByClassName("kota");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        document.getElementById(namakota).style.display = "block";
+      }
+      function proses()
+      {
+	          alert("MOHON MAAF BELUM BISA DI AKSES")
+      }
+
+    </script>
+  </body>
+</html>
